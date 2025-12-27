@@ -1,8 +1,8 @@
 <div align="center">
 
 <h1>Portfolio de Desarrollo de Videojuegos</h1>
-<h3>Máster en [Nombre de tu Máster]</h3>
-<h3>Alumno: [Tu Nombre Completo]</h3>
+<h3>Máster de Desarrollo de Videojuegos ULL</h3>
+<h3>Jesús Enrique López Mendoza</h3>
 
 <br>
 
