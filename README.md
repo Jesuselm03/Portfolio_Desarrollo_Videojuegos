@@ -5,10 +5,11 @@
     /* Icono del mando para el patrón de fondo */
     background-image: url('https://freesvg.org/img/joypad.png');
     background-repeat: repeat;
-    background-size: 60px; /* Tamaño de los mandos del fondo */
-    background-blend-mode: overlay; /* Efecto para que se mezclen con el gris */
+    /* CAMBIO: Aumentado a 110px para que se repitan menos y parezcan más separados */
+    background-size: 110px; 
+    background-blend-mode: overlay; 
     color: white;
-    font-family: 'Press Start 2P', cursive; /* Fuente aplicada a todo */
+    font-family: 'Press Start 2P', cursive; 
     line-height: 1.6;
     margin: 0;
 ">
@@ -17,15 +18,21 @@
 
     <br><br>
 
-    <h1 style="font-size: 18px; line-height: 1.5;">Portfolio de Desarrollo de Videojuegos</h1>
+    <h1 style="font-family: 'Press Start 2P', cursive; font-size: 22px; line-height: 1.5;">
+        Portfolio de Desarrollo de Videojuegos
+    </h1>
     
-    <h3 style="font-size: 12px; color: #00C9FF; margin-top: 20px;">Master de Desarrollo de Videojuegos ULL</h3>
+    <h3 style="font-family: 'Press Start 2P', cursive; font-size: 12px; color: #00C9FF; margin-top: 20px;">
+        Master de Desarrollo de Videojuegos ULL
+    </h3>
     
-    <h3 style="font-size: 12px; margin-top: 10px;">Jesus Enrique Lopez Mendoza</h3>
+    <h3 style="font-family: 'Press Start 2P', cursive; font-size: 12px; margin-top: 10px;">
+        Jesus Enrique Lopez Mendoza
+    </h3>
 
     <br>
 
-    <p style="font-size: 10px; max-width: 700px; padding: 0 20px;">
+    <p style="font-family: 'Press Start 2P', cursive; font-size: 11px; max-width: 700px; padding: 0 20px; line-height: 1.8;">
         Bienvenido. Este es mi portfolio personal donde recopilo todos los proyectos practicos realizados durante el curso.
     </p>
 
@@ -44,8 +51,8 @@
             font-family: 'Press Start 2P', cursive;
             font-weight: bold;
             text-transform: uppercase;
-            border: 4px solid white; /* Borde grueso */
-            box-shadow: 6px 6px 0px #000000; /* Sombra dura negra */
+            border: 4px solid white; 
+            box-shadow: 6px 6px 0px #000000; 
             display: inline-block;
             cursor: pointer;
             transition: transform 0.1s;
