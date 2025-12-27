@@ -1,71 +1,177 @@
-<body style="background-color: #1a1a1a; color: white; font-family: Arial, sans-serif;">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menú de Asignaturas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
 
-<div align="center">
+<body style="
+    background-color: #1a1a1a;
+    /* Efecto Scanlines igual que la portada */
+    background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+    background-size: 4px 4px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+">
 
-<h1>Índice de Asignaturas</h1>
-<p>Selecciona una asignatura para ver los proyectos:</p>
+    <h1 style="color: #FFFF00; font-size: 18px; margin-top: 40px; margin-bottom: 10px; line-height: 1.5;">
+        INDICE DE ASIGNATURAS
+    </h1>
+    
+    <p style="color: #cccccc; font-size: 10px; margin-bottom: 50px;">
+        Selecciona un modulo para acceder
+    </p>
 
-<br>
+    <div style="
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 20px; 
+        max-width: 1000px; 
+        margin: 0 auto;
+    ">
 
-<table>
-  <tr>
-    <td width="70%"><h3>1. Diseño de Videojuegos</h3></td>
-    <td width="30%" align="center">
-      <a href="diseno.html">
-        <img src="https://img.shields.io/badge/VER%20PROYECTOS-blue?style=for-the-badge&logo=github" alt="Ver">
-      </a>
-    </td>
-  </tr>
+        <a href="diseno.html" style="text-decoration: none;">
+            <div style="
+                background: #222;
+                border: 4px solid #00C9FF; /* Borde Cian Activo */
+                width: 250px;
+                padding: 20px;
+                cursor: pointer;
+                box-shadow: 6px 6px 0px #000000;
+                transition: transform 0.1s;
+                text-align: left;
+            "
+            onmouseover="this.style.transform='translate(-2px, -2px)'" 
+            onmouseout="this.style.transform='translate(0px, 0px)'">
+                <div style="color: #00C9FF; font-size: 10px; margin-bottom: 15px;">01.</div>
+                <div style="color: white; font-size: 12px; line-height: 1.6;">DISEÑO DE VIDEOJUEGOS</div>
+                <div style="margin-top: 15px; font-size: 8px; color: #00C9FF;">[ ACCEDER ]</div>
+            </div>
+        </a>
 
-  <tr>
-    <td><h3>2. Producción de Videojuegos</h3></td>
-    <td align="center">
-      <a href="proxima_asignatura.md">
-        <img src="https://img.shields.io/badge/VER%20PROYECTOS-lightgrey?style=for-the-badge" alt="Ver">
-      </a>
-    </td>
-  </tr>
+        <a href="proxima_asignatura.md" style="text-decoration: none;">
+            <div style="
+                background: #1a1a1a;
+                border: 2px solid #555; /* Borde Gris */
+                width: 250px;
+                padding: 20px;
+                cursor: pointer;
+                box-shadow: 6px 6px 0px #000000;
+                transition: transform 0.1s;
+                text-align: left;
+                opacity: 0.8;
+            "
+            onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.opacity='1';" 
+            onmouseout="this.style.transform='translate(0px, 0px)'; this.style.opacity='0.8';">
+                <div style="color: #777; font-size: 10px; margin-bottom: 15px;">02.</div>
+                <div style="color: #aaa; font-size: 10px; line-height: 1.6;">PRODUCCION DE VIDEOJUEGOS</div>
+            </div>
+        </a>
 
-  <tr>
-    <td><h3>3. Fundamentos del Desarrollo</h3></td>
-    <td align="center">
-      <a href="proxima_asignatura.md">
-        <img src="https://img.shields.io/badge/VER%20PROYECTOS-lightgrey?style=for-the-badge" alt="Ver">
-      </a>
-    </td>
-  </tr>
+        <a href="proxima_asignatura.md" style="text-decoration: none;">
+            <div style="
+                background: #1a1a1a;
+                border: 2px solid #555;
+                width: 250px;
+                padding: 20px;
+                cursor: pointer;
+                box-shadow: 6px 6px 0px #000000;
+                transition: transform 0.1s;
+                text-align: left;
+                opacity: 0.8;
+            "
+            onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.opacity='1';" 
+            onmouseout="this.style.transform='translate(0px, 0px)'; this.style.opacity='0.8';">
+                <div style="color: #777; font-size: 10px; margin-bottom: 15px;">03.</div>
+                <div style="color: #aaa; font-size: 10px; line-height: 1.6;">FUNDAMENTOS DEL DESARROLLO</div>
+            </div>
+        </a>
 
-  <tr>
-    <td><h3>4. Inteligencia Artificial</h3></td>
-    <td align="center">
-      <a href="proxima_asignatura.md">
-        <img src="https://img.shields.io/badge/VER%20PROYECTOS-lightgrey?style=for-the-badge" alt="Ver">
-      </a>
-    </td>
-  </tr>
+        <a href="proxima_asignatura.md" style="text-decoration: none;">
+            <div style="
+                background: #1a1a1a;
+                border: 2px solid #555;
+                width: 250px;
+                padding: 20px;
+                cursor: pointer;
+                box-shadow: 6px 6px 0px #000000;
+                transition: transform 0.1s;
+                text-align: left;
+                opacity: 0.8;
+            "
+            onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.opacity='1';" 
+            onmouseout="this.style.transform='translate(0px, 0px)'; this.style.opacity='0.8';">
+                <div style="color: #777; font-size: 10px; margin-bottom: 15px;">04.</div>
+                <div style="color: #aaa; font-size: 10px; line-height: 1.6;">INTELIGENCIA ARTIFICIAL</div>
+            </div>
+        </a>
 
-  <tr>
-    <td><h3>5. Motores y Sistemas</h3></td>
-    <td align="center">
-      <a href="proxima_asignatura.md">
-        <img src="https://img.shields.io/badge/VER%20PROYECTOS-lightgrey?style=for-the-badge" alt="Ver">
-      </a>
-    </td>
-  </tr>
+        <a href="proxima_asignatura.md" style="text-decoration: none;">
+            <div style="
+                background: #1a1a1a;
+                border: 2px solid #555;
+                width: 250px;
+                padding: 20px;
+                cursor: pointer;
+                box-shadow: 6px 6px 0px #000000;
+                transition: transform 0.1s;
+                text-align: left;
+                opacity: 0.8;
+            "
+            onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.opacity='1';" 
+            onmouseout="this.style.transform='translate(0px, 0px)'; this.style.opacity='0.8';">
+                <div style="color: #777; font-size: 10px; margin-bottom: 15px;">05.</div>
+                <div style="color: #aaa; font-size: 10px; line-height: 1.6;">MOTORES Y SISTEMAS</div>
+            </div>
+        </a>
 
-  <tr>
-    <td><h3>6. Programación Optimizada</h3></td>
-    <td align="center">
-      <a href="proxima_asignatura.md">
-        <img src="https://img.shields.io/badge/VER%20PROYECTOS-lightgrey?style=for-the-badge" alt="Ver">
-      </a>
-    </td>
-  </tr>
-</table>
+        <a href="proxima_asignatura.md" style="text-decoration: none;">
+            <div style="
+                background: #1a1a1a;
+                border: 2px solid #555;
+                width: 250px;
+                padding: 20px;
+                cursor: pointer;
+                box-shadow: 6px 6px 0px #000000;
+                transition: transform 0.1s;
+                text-align: left;
+                opacity: 0.8;
+            "
+            onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.opacity='1';" 
+            onmouseout="this.style.transform='translate(0px, 0px)'; this.style.opacity='0.8';">
+                <div style="color: #777; font-size: 10px; margin-bottom: 15px;">06.</div>
+                <div style="color: #aaa; font-size: 10px; line-height: 1.6;">PROGRAMACION OPTIMIZADA</div>
+            </div>
+        </a>
 
-<br>
-<br>
+    </div>
 
-<a href="index.html">Volver a la Portada</a>
+    <br><br><br>
 
-</div>
+    <a href="index.html" style="text-decoration: none;">
+        <div style="
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 10px;
+            color: #ff5555;
+            border: 2px solid #ff5555;
+            background-color: #1a1a1a;
+            cursor: pointer;
+            box-shadow: 4px 4px 0px #000000;
+            transition: transform 0.1s;
+        "
+        onmouseover="this.style.transform='translate(-2px, -2px)'" 
+        onmouseout="this.style.transform='translate(0px, 0px)'">
+            < VOLVER A LA PORTADA
+        </div>
+    </a>
+
+    <br><br>
+
+</body>
+</html>
