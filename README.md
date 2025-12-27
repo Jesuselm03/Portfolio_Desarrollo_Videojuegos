@@ -20,17 +20,17 @@
     </h1>
     
     <h3 style="font-family: 'Press Start 2P', cursive; font-size: 12px; color: #8A2BE2; margin-top: 20px;">
-        Master de Desarrollo de Videojuegos ULL
+        Máster de Desarrollo de Videojuegos ULL
     </h3>
     
     <h3 style="font-family: 'Press Start 2P', cursive; font-size: 12px; margin-top: 10px; color: #FFFF00;">
-        Jesus Enrique Lopez Mendoza
+        Jesús Enrique López Mendoza
     </h3>
 
     <br>
 
     <p style="font-family: 'Press Start 2P', cursive; font-size: 11px; max-width: 700px; padding: 0 20px; line-height: 1.8;">
-        Bienvenido. Este es mi portfolio personal donde recopilo todos los proyectos practicos realizados durante el curso.
+        Bienvenido. Este es mi portfolio personal donde recopilo todos los proyectos prácticos realizados durante el curso.
     </p>
 
     <br><br>
