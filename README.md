@@ -12,7 +12,7 @@
 
     <br><br>
 
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmV3eW55b3F4a2xvY3F4a2xvY3F4a2xvY3F4a2xvY3F4a2xvYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/jR8EDxMbqi1QQ/giphy.gif" width="200px" alt="Mando Consola">
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzd0a3cxbXB0NThvbHg0MGVpejBwdGN5ZWZ5d2Z3cmR1bmF4aGlodSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TLPTbOAwRD9zoi1QOI/giphy.gif" width="200px" alt="Mando Consola">
 
     <br><br><br>
 
