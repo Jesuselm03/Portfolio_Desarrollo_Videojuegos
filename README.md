@@ -12,7 +12,7 @@
 
     <br><br>
 
-    <img src="https://media.giphy.com/media/TLPTbOAwRD9zoi1QOI/giphy.gif">
+    <iframe src="https://giphy.com/embed/TLPTbOAwRD9zoi1QOI" width="200" height="170" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
     <br><br><br>
 
