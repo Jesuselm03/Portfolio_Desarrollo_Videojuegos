@@ -9,8 +9,8 @@
     font-family: 'Press Start 2P', cursive; 
     line-height: 1.6;
     margin: 0;
-    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
-    padding-bottom: 50px; /* Espacio extra abajo para los personajes */
+    min-height: 100vh; 
+    padding-bottom: 50px;
 ">
 
 <div align="center">
@@ -62,15 +62,15 @@
 
     <br><br><br><br>
 
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <div style="display: flex; justify-content: center; align-items: flex-end; gap: 10px; flex-wrap: wrap;">
         
-        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/c0fe53c6-f211-45c1-9ce8-e215e43ef563/d3np35i-1d462358-0ece-4244-b9d9-158ad6af6ac8.png" alt="Char 1" style="image-rendering: pixelated;">
+        <iframe src="https://giphy.com/embed/QfvoEfKgqjyTu" width="100" height="100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         
-        <img src="https://art.pixilart.com/aaccbab31dd87f8.png" height="64px" alt="Char 2" style="image-rendering: pixelated;">
+        <iframe src="https://giphy.com/embed/MXcpEMuEwGvyMI9nft" width="90" height="100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-        <img src="https://www.nicepng.com/png/full/164-1648732_8-bit-mario-coin-mario-coin-pixel.png" height="64px" alt="Char 3" style="image-rendering: pixelated;">
+        <iframe src="https://giphy.com/embed/HmJVjLZJvJ3Hh6lbHT" width="100" height="85" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
          
-         </div>
+    </div>
 
     <br><br>
 
