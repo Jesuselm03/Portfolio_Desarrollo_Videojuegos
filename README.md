@@ -1,14 +1,12 @@
 <div align="center">
 
-# Portfolio de Desarrollo de Videojuegos
-### Máster en [Nombre de tu Máster]
-### Alumno: [Tu Nombre Completo]
-
----
+<h1>Portfolio de Desarrollo de Videojuegos</h1>
+<h3>Máster en [Nombre de tu Máster]</h3>
+<h3>Alumno: [Tu Nombre Completo]</h3>
 
 <br>
 
-¡Bienvenido! Este es mi portfolio personal donde recopilo todos los proyectos prácticos realizados durante el curso.
+<p>¡Bienvenido! Este es mi portfolio personal donde recopilo todos los proyectos prácticos realizados durante el curso.</p>
 
 <br>
 
