@@ -2,12 +2,6 @@
 
 <body style="
     background-color: #1a1a1a;
-    /* Icono del mando */
-    background-image: url('https://freesvg.org/img/joypad.png');
-    background-repeat: repeat;
-    background-size: 110px; 
-    /* CAMBIO: 'soft-light' hace que los mandos se vean mucho más transparentes y sutiles */
-    background-blend-mode: soft-light; 
     color: white;
     font-family: 'Press Start 2P', cursive; 
     line-height: 1.6;
