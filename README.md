@@ -2,12 +2,9 @@
 
 <body style="
     background-color: #1a1a1a;
-    /* --- NUEVO EFECTO DE FONDO SUTIL (SCANLINES/CRT) --- */
-    /* Esto crea líneas horizontales muy finas y transparentes */
+    /* Efecto Scanlines (TV antigua) */
     background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.5) 50%);
-    /* Esto define el grosor de las líneas (4px) para que se vea retro */
     background-size: 4px 4px;
-    /* -------------------------------------------------- */
     color: white;
     font-family: 'Press Start 2P', cursive; 
     line-height: 1.6;
@@ -17,7 +14,7 @@
 
 <div align="center">
 
-    <h1 style="font-family: 'Press Start 2P', cursive; font-size: 22px; line-height: 1.5; margin-top: 40px;">
+    <h1 style="font-family: 'Press Start 2P', cursive; font-size: 22px; line-height: 1.5; margin-top: 0px; padding-top: 20px;">
         Portfolio de Desarrollo de Videojuegos
     </h1>
     
@@ -25,7 +22,7 @@
         Master de Desarrollo de Videojuegos ULL
     </h3>
     
-    <h3 style="font-family: 'Press Start 2P', cursive; font-size: 12px; margin-top: 10px;">
+    <h3 style="font-family: 'Press Start 2P', cursive; font-size: 12px; margin-top: 10px; color: #00C9FF;">
         Jesus Enrique Lopez Mendoza
     </h3>
 
