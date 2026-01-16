@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inteligencia Artificial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body style="
+    background-color: #1a1a1a;
+    /* Fondo Scanlines */
+    background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+    background-size: 4px 4px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+">
+
+<div align="center" style="max-width: 900px; margin: auto;">
+
+    <h1 style="color: #FFFF00; font-size: 20px; line-height: 1.5; margin-top: 40px; margin-bottom: 30px; text-transform: uppercase;">
+        > Archivo: Inteligencia Artificial
+    </h1>
+
+    <div style="
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 2px solid #555;
+        padding: 25px;
+        text-align: justify;
+        box-shadow: 4px 4px 0px #000000;
+    ">
+        <p style="color: #cccccc; font-size: 10px; line-height: 1.8; margin: 0;">
+            En esta entrada se detalla el proyecto final de la asignatura, consistente en el desarrollo de un sistema GOAP (Goal Oriented Action Planning) en Unity. En esta simulación, varios agentes autónomos planifican y ejecutan acciones en tiempo real dentro de una escena para cumplir sus objetivos. Para este caso práctico, he realizado una simulación con temática de cementerio, donde diferentes entidades interactúan entre sí de forma sistémica.
+        </p>
+    </div>
+
+    <br><br>
+
+    <div style="border-bottom: 4px dashed #333; width: 100%; margin: 20px 0;"></div>
+
+    <br>
+
+    <h2 style="color: #00C9FF; font-size: 14px; text-align: left; margin-bottom: 25px;">
+        [01] Definición de Agentes
+    </h2>
+
+    <div style="text-align: left; margin-bottom: 30px;">
+        
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Gravediggers (Enterradores)</p>
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
+            Se encargan de cavar tumbas para extraer los cadáveres. Cuando su energía se agota, acuden a las cabañas para descansar y recuperarse.
+        </p>
+
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Necromancers (Nigromantes)</p>
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
+            Recogen los cadáveres desenterrados por los Gravediggers y los transportan a los altares para invocar esqueletos. Su lugar de descanso son las criptas.
+        </p>
+
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Skeletons (Esqueletos)</p>
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
+            Una vez invocados, su único objetivo es perseguir a los Gravediggers para acabar con ellos.
+        </p>
+
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Hunters (Cazadores)</p>
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
+            Son los encargados de mantener el orden, cazando a cualquier esqueleto que aparezca en la escena. Descansan en las cabañas cuando se cansan.
+        </p>
+
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Ghosts (Fantasmas)</p>
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
+            Su función es revivir a los Gravediggers asesinados transformándolos en estatuas (con un límite máximo de 5 activos en escena). Si no hay nadie a quien revivir, deambulan por el cementerio.
+        </p>
+    </div>
+
+    <div style="border: 4px solid #FFFF00; display: inline-block; box-shadow: 6px 6px 0px #000000; padding: 0; margin-bottom: 30px;">
+        <img src="agents_ia.png" width="100%" style="display: block; max-width: 700px;" alt="Agentes y Edificios GOAP">
+    </div>
+
+    <br><br>
+
+    <div style="border-bottom: 4px dashed #333; width: 100%; margin: 20px 0;"></div>
+
+    <br>
+
+    <h2 style="color: #00C9FF; font-size: 14px; text-align: left; margin-bottom: 25px;">
+        [02] Acciones Planificadas (GOAP)
+    </h2>
+
+    <div style="text-align: left; margin-bottom: 30px;">
+        
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
+            <span style="color: #00C9FF;">[Dig Grave]</span> Acción de los Gravediggers. Localizan una tumba, se desplazan hacia ella y proceden a excavar.
+        </p>
+        
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
+            <span style="color: #00C9FF;">[Rest]</span> Acción de descanso común para Gravediggers, Necromancers y Hunters. El agente localiza su edificio asignado y entra en él para recuperar energía.
+        </p>
+
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
+            <span style="color: #00C9FF;">[Collect Body]</span> Acción de los Necromancers para recoger un cuerpo disponible y transportarlo hasta el altar.
+        </p>
+
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
+            <span style="color: #00C9FF;">[Dark Ritual]</span> Acción que ejecutan los Necromancers en el altar para consumir el cuerpo y generar un esqueleto.
+        </p>
+
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
+            <span style="color: #00C9FF;">[Kill]</span> Acción ofensiva de los esqueletos. Buscan un Gravedigger cercano y lo atacan hasta eliminarlo.
+        </p>
+
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
+            <span style="color: #00C9FF;">[Hunt Monster]</span> Acción de los Hunters. Detectan esqueletos en la escena, los persiguen y los cazan.
+        </p>
+
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
+            <span style="color: #00C9FF;">[Haunt]</span> Acción pasiva del fantasma para deambular aleatoriamente por la 'NavMesh Surface' cuando no hay tareas de resurrección pendientes.
+        </p>
+
+        <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
+            <span style="color: #00C9FF;">[Resurrect]</span> Acción prioritaria de los fantasmas para devolver la vida a los Gravediggers caídos.
+        </p>
+
+    </div>
+
+    <div style="border: 4px solid #FFFF00; display: inline-block; box-shadow: 6px 6px 0px #000000; padding: 0; margin-bottom: 40px;">
+        <img src="goap_demo.gif" width="100%" style="display: block; max-width: 600px;" alt="Demo GOAP">
+    </div>
+
+    <h2 style="color: #00C9FF; font-size: 14px; text-align: center; margin-bottom: 20px;">
+        > Video Explanation (English)
+    </h2>
+
+    <div style="border: 4px solid #00C9FF; display: inline-block; box-shadow: 6px 6px 0px #000000;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TU_ID_VIDEO_AQUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <br><br><br><br>
+
+    <a href="menu.html" style="text-decoration: none;">
+        <div style="
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 10px;
+            color: #ff5555;
+            border: 2px solid #ff5555;
+            background-color: #1a1a1a;
+            cursor: pointer;
+            box-shadow: 4px 4px 0px #000000;
+            transition: transform 0.1s;
+        "
+        onmouseover="this.style.transform='translate(-2px, -2px)'" 
+        onmouseout="this.style.transform='translate(0px, 0px)'">
+            < VOLVER AL MENÚ
+        </div>
+    </a>
+
+    <br><br><br>
+
+    <iframe src="https://giphy.com/embed/HuC2tCKvrM03C" width="100" height="100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+    <br><br>
+
+</div>
+
+</body>
+</html>
