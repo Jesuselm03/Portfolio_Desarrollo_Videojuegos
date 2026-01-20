@@ -31,7 +31,7 @@
         box-shadow: 4px 4px 0px #000000;
     ">
         <p style="color: #cccccc; font-size: 10px; line-height: 1.8; margin: 0;">
-            En esta entrada se detalla el proyecto final de la asignatura, consistente en el desarrollo de un sistema GOAP (Goal Oriented Action Planning) en Unity. En esta simulación, varios agentes autónomos planifican y ejecutan acciones en tiempo real dentro de una escena para cumplir sus objetivos. Para este caso práctico, he realizado una simulación con temática de cementerio, donde diferentes entidades interactúan entre sí de forma sistémica.
+            This entry details the final project of the subject, consisting of the development of a GOAP (Goal Oriented Action Planning) system in Unity. In this simulation, several autonomous agents plan and execute actions in real-time within a scene to achieve their goals. For this practical case, I created a cemetery-themed simulation, where different entities interact with each other systematically.
         </p>
     </div>
 
@@ -42,39 +42,39 @@
     <br>
 
     <h2 style="color: #00C9FF; font-size: 14px; text-align: left; margin-bottom: 25px;">
-        [01] Definición de Agentes
+        [01] Agent Definition
     </h2>
 
     <div style="text-align: left; margin-bottom: 30px;">
         
-        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Gravediggers (Enterradores)</p>
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Gravediggers</p>
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
-            Se encargan de cavar tumbas para extraer los cadáveres. Cuando su energía se agota, acuden a las cabañas para descansar y recuperarse.
+            They are in charge of digging graves to extract corpses. When their energy runs out, they go to the cabins to rest and recover.
         </p>
 
-        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Necromancers (Nigromantes)</p>
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Necromancers</p>
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
-            Recogen los cadáveres desenterrados por los Gravediggers y los transportan a los altares para invocar esqueletos. Su lugar de descanso son las criptas.
+            They collect the corpses unearthed by the Gravediggers and transport them to the altars to summon skeletons. Their resting place is the crypts.
         </p>
 
-        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Skeletons (Esqueletos)</p>
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Skeletons</p>
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
-            Una vez invocados, su único objetivo es perseguir a los Gravediggers para acabar con ellos.
+            Once summoned, their only objective is to chase the Gravediggers to finish them off.
         </p>
 
-        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Hunters (Cazadores)</p>
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Hunters</p>
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
-            Son los encargados de mantener el orden, cazando a cualquier esqueleto que aparezca en la escena. Descansan en las cabañas cuando se cansan.
+            They are in charge of maintaining order, hunting down any skeleton that appears in the scene. They rest in the cabins when they get tired.
         </p>
 
-        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Ghosts (Fantasmas)</p>
+        <p style="color: #FFFF00; font-size: 10px; margin-bottom: 5px;">> Ghosts</p>
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
-            Su función es revivir a los Gravediggers asesinados desde unas estatuas (con un límite máximo de 5 activos en escena). Si no hay nadie a quien revivir, deambulan por el cementerio.
+            Their function is to revive murdered Gravediggers by transforming them into statues (with a maximum limit of 5 active in the scene). If there is no one to revive, they wander around the cemetery.
         </p>
     </div>
 
     <div style="border: 4px solid #FFFF00; display: inline-block; box-shadow: 6px 6px 0px #000000; padding: 0; margin-bottom: 30px;">
-        <img src="agents_ia.png" width="100%" style="display: block; max-width: 700px;" alt="Agentes y Edificios GOAP">
+        <img src="agents_ia.png" width="100%" style="display: block; max-width: 700px;" alt="GOAP Agents and Buildings">
     </div>
 
     <br><br>
@@ -84,41 +84,41 @@
     <br>
 
     <h2 style="color: #00C9FF; font-size: 14px; text-align: left; margin-bottom: 25px;">
-        [02] Acciones Planificadas (GOAP)
+        [02] Planned Actions (GOAP)
     </h2>
 
     <div style="text-align: left; margin-bottom: 30px;">
         
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
-            <span style="color: #00C9FF;">[Dig Grave]</span> Acción de los Gravediggers. Localizan una tumba, se desplazan hacia ella y proceden a excavar.
+            <span style="color: #00C9FF;">[Dig Grave]</span> Gravediggers' action. They locate a grave, move towards it, and proceed to dig.
         </p>
         
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
-            <span style="color: #00C9FF;">[Rest]</span> Acción de descanso común para Gravediggers, Necromancers y Hunters. El agente localiza su edificio asignado y entra en él para recuperar energía.
+            <span style="color: #00C9FF;">[Rest]</span> Common rest action for Gravediggers, Necromancers, and Hunters. The agent locates their assigned building and enters it to recover energy.
         </p>
 
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
-            <span style="color: #00C9FF;">[Collect Body]</span> Acción de los Necromancers para recoger un cuerpo disponible y transportarlo hasta el altar.
+            <span style="color: #00C9FF;">[Collect Body]</span> Necromancers' action to pick up an available body and transport it to the altar.
         </p>
 
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
-            <span style="color: #00C9FF;">[Dark Ritual]</span> Acción que ejecutan los Necromancers en el altar para consumir el cuerpo y generar un esqueleto.
+            <span style="color: #00C9FF;">[Dark Ritual]</span> Action executed by Necromancers at the altar to consume the body and generate a skeleton.
         </p>
 
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
-            <span style="color: #00C9FF;">[Kill]</span> Acción ofensiva de los esqueletos. Buscan un Gravedigger cercano y lo atacan hasta eliminarlo.
+            <span style="color: #00C9FF;">[Kill]</span> Offensive action of the skeletons. They search for a nearby Gravedigger and attack until eliminating them.
         </p>
 
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
-            <span style="color: #00C9FF;">[Hunt Monster]</span> Acción de los Hunters. Detectan esqueletos en la escena, los persiguen y los cazan.
+            <span style="color: #00C9FF;">[Hunt Monster]</span> Hunters' action. They detect skeletons in the scene, chase them, and hunt them down.
         </p>
 
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
-            <span style="color: #00C9FF;">[Haunt]</span> Acción pasiva del fantasma para deambular aleatoriamente por la 'NavMesh Surface' cuando no hay tareas de resurrección pendientes.
+            <span style="color: #00C9FF;">[Haunt]</span> Passive action of the ghost to wander randomly around the 'NavMesh Surface' when there are no pending resurrection tasks.
         </p>
 
         <p style="color: #aaaaaa; font-size: 10px; line-height: 1.8; margin-bottom: 10px;">
-            <span style="color: #00C9FF;">[Resurrect]</span> Acción prioritaria de los fantasmas para devolver la vida a los Gravediggers caídos.
+            <span style="color: #00C9FF;">[Resurrect]</span> Priority action of the ghosts to bring fallen Gravediggers back to life.
         </p>
 
     </div>
